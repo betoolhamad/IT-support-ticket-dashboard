@@ -6,7 +6,7 @@ import DashboardLayout from './Layouts/DashboardLayout';
 import { BrowserRouter , Routes, Route , Navigate } from "react-router-dom"
 import Login from "./pages/Login"
 // import Product from './components/Product';
-import TicketsForm from "./pages/new-ticket"
+import TicketsForm from "./pages/TicketsForm"
 
 
 
