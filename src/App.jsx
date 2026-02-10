@@ -17,6 +17,9 @@ function App() {
 
       <Routes>
 
+         <Route path="/" element={<Navigate to="/dashboard" />} />
+
+
          <Route path="/Login" element={<Login setIsLoggedIn={setIsLoggedIn}/>}>
 
          </Route>
@@ -24,10 +27,7 @@ function App() {
          <Route path="/dashboard" element={IsLoggedIn ? <DashboardLayout/> : <Navigate to="/Login"/>}></Route>
 
          <Route path="/new-ticket" element={<TicketsForm />} />
-         <Routes>
-            <Route path="/" element={<Navigate to="/dashboard" replace />} />
-            <Route path="/dashboard" element={<DashboardLayout />} />
-         </Routes>
+       
 
          
         
