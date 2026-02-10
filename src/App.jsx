@@ -29,7 +29,7 @@ function App() {
          
          <Route path="/dashboard" element={IsLoggedIn ? <DashboardLayout/> : <Navigate to="/Login"/>}></Route>
 
-         <Route path="/new-ticket" element={<TicketsForm />} />
+         {/* <Route path="/new-ticket" element={<TicketsForm />} /> */}
        
 
          
