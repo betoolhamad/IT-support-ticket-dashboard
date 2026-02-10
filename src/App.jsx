@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import DashboardLayout from './Layouts/Dashboardlayout'
+import DashboardLayout from './Layouts/DashboardLayout'
 import { BrowserRouter , Routes, Route , Navigate } from "react-router-dom"
 import Login from "./pages/Login"
 // import Product from './components/Product';
