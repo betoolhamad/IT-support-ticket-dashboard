@@ -7,7 +7,7 @@ import Statcard from "../components/Statcard";
 import { useNavigate } from "react-router-dom";
 import Login from "../pages/Login";
 import { Route , Routes } from "react-router-dom";
-import { tickets } from "/Users/betoolaljurish/dashboard/src/components/data/data.js";
+import { tickets } from "../components/data/data.js";
 
 
 function DashboardLayout() {
