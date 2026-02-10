@@ -6,7 +6,9 @@ import DashboardLayout from './Layouts/DashboardLayout';
 import { BrowserRouter , Routes, Route , Navigate } from "react-router-dom"
 import Login from "./pages/Login"
 // import Product from './components/Product';
-import TicketsForm from "./pages/TicketsForm"
+import TicketsForm from "./pages/new-ticket"
+
+
 
 
 function App() {
@@ -19,9 +21,11 @@ function App() {
 
          <Route path="/" element={<Navigate to="/dashboard" />} />
 
-         <Route path="/LoginPage" element={<Navigate to="/Login" />} />
 
-         <Route path="/new-ticket" element={<Navigate to="/TicketsForm" />} />
+         <Route path="/Login" element={<Navigate to="/Login" replace />} />
+
+
+         <Route path="/new-ticket" element={<Navigate to="/TicketsForm" replace />} />
 
 
 
