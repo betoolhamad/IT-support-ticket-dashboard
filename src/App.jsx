@@ -17,26 +17,22 @@ function App() {
   return (
     <BrowserRouter>
 
-      <Routes>
+      {/* Default redirect to dashboard */}
+      <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
-         <Route path="/" element={<Navigate to="/dashboard" />} />
+      {/* Login page */}
+      <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
 
+      {/* Dashboard, requires login */}
+      <Route path="/dashboard" element={isLoggedIn ? <DashboardLayout /> : <Navigate to="/login" replace />} />
 
-         <Route path="/Login" element={<Navigate to="/Login" replace />} />
+      {/* New Ticket page */}
+      <Route path="/new-ticket" element={isLoggedIn ? <TicketsForm /> : <Navigate to="/login" replace />} />
 
+      {/* Optional: redirect old paths */}
+      <Route path="/LoginPage" element={<Navigate to="/login" replace />} />
+      <Route path="/TicketsForm" element={<Navigate to="/new-ticket" replace />} />
 
-         <Route path="/new-ticket" element={<Navigate to="/TicketsForm" replace />} />
-
-
-
-
-         <Route path="/Login" element={<Login setIsLoggedIn={setIsLoggedIn}/>}>
-
-         </Route>
-         
-         <Route path="/dashboard" element={IsLoggedIn ? <DashboardLayout/> : <Navigate to="/Login"/>}></Route>
-
-         <Route path="/new-ticket" element={<TicketsForm />} />
        
 
          
