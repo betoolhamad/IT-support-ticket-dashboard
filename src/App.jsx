@@ -21,7 +21,7 @@ function App() {
 
          <Route path="/" element={<Navigate to="/dashboard" />} />
 
-         <Route path="/new-ticket" element={IsLoggedIn ? <TicketsForm /> : <Navigate to="/login" replace />} />
+         {/* <Route path="/new-ticket" element={IsLoggedIn ? <TicketsForm /> : <Navigate to="/login" replace />} /> */}
 
          <Route path="/Login" element={<Login setIsLoggedIn={setIsLoggedIn}/>}>
 
@@ -29,7 +29,7 @@ function App() {
          
          <Route path="/dashboard" element={IsLoggedIn ? <DashboardLayout/> : <Navigate to="/Login"/>}></Route>
 
-         {/* <Route path="/new-ticket" element={<TicketsForm />} /> */}
+         <Route path="/new-ticket" element={<TicketsForm />} />
        
 
          
