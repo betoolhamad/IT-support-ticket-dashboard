@@ -1,0 +1,325 @@
+h3 {
+    color: aliceblue;
+    padding: 20px;
+    margin-top: 0;
+    margin-left:10px;
+    text-align: center;
+}
+/* .sidebar  {
+    width: 240px;
+    background-color : #7db28f;
+    height: 100vh;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 1.2s ease;
+     flex-shrink: 0; 
+ 
+} */
+
+.page-wrapper {
+    /* display: flex;
+    width: 100%;
+    height: 100vh; */
+    /* overflow-x: hidden;  */
+    display: flex;
+    width: 100%;
+    max-height: 100vh; /* هذي لها علاقة ان المحتوى ما اقدر انزل تحت فيمكن اشيلها*/
+    overflow-x: auto; /* يمنع scroll أفقياً */
+
+
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color : #273826;
+    height: 100vh;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 1.2s ease;
+    flex-shrink: 0; 
+
+  }
+
+.sidebar.show {
+    transform: translateX(0);
+  }
+
+.nav-list {   /* ul */
+
+    padding: 20px;
+
+}
+
+ul li {
+    list-style: none;
+}
+ul li  {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color : white;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin:10px;
+    cursor: pointer;
+
+}
+
+/* ul li a {
+
+
+} */
+
+ul li:hover, 
+ul li .nav-item.active
+{   
+    /* padding : 0 20px; */
+    color : white;
+    background-color: #429b64;
+
+}
+/* 
+ul li a:hover.active {
+    color : wheat;
+    background-color: #183d62;
+} */
+
+.log-btn {
+    font-family: 'Times New Roman', Times, serif;
+    padding : 10px;
+    color : white; 
+    background-color:#51BD7B ;
+    border-radius: 10px;
+    margin: 40px 20px;
+    border-color: #51BD7B  ;
+    font-size: 15px;
+
+}
+
+.log-btn:hover {
+    background-color:#51BD7B ;
+    cursor: pointer;
+    border-color: #51BD7B;
+}
+
+
+
+/* test */
+
+/* ==============================
+   Sidebar - IT Support Dashboard
+   تصميم السايد بار الاحترافي
+   ============================== */
+
+/* ========== حاوية الصفحة ========== */
+.page-wrapper {
+    display: flex;
+    width: 100%;
+    /* height: 100vh; */
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+    max-height: 100vh;
+}
+
+/* ========== السايد بار ========== */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #273826 0%, #1e2d1e 100%);
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    transform: translateX(100%);
+    transition: transform 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    /* z-index: 999;  */
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+
+}
+
+
+
+.sidebar.show {
+    transform: translateX(0);
+    
+}
+
+/* ========== عنوان السايد بار ========== */
+.sidebar h3 {
+    color: white;
+    padding: 25px 20px;
+    margin:  0px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(81, 189, 123, 0.3);
+    background: rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+}
+
+/* ========== قائمة التنقل ========== */
+.nav-list {
+    padding: 20px 15px;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.nav-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.nav-list::-webkit-scrollbar-thumb {
+    background: rgba(81, 189, 123, 0.5);
+    border-radius: 3px;
+}
+
+/* ========== عناصر القائمة ========== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #51BD7B;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    background: rgba(81, 189, 123, 0.15);
+    color: white;
+    transform: translateX(-5px);
+}
+
+ul li:hover::before {
+    transform: scaleY(1);
+}
+
+/* ========== العنصر النشط ========== */
+ul li.nav-item.active {
+    background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(81, 189, 123, 0.4);
+}
+
+ul li.nav-item.active::before {
+    transform: scaleY(1);
+    background: white;
+}
+
+/* ========== زر تسجيل الخروج ========== */
+.log-btn {
+    width: calc(100% - 40px);
+    margin: 20px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(81, 189, 123, 0.3);
+}
+
+.log-btn:hover {
+    background: linear-gradient(135deg, #429b64 0%, #51BD7B 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(81, 189, 123, 0.4);
+}
+
+.log-btn:active {
+    transform: translateY(0);
+}
+
+/* ========== المحتوى الرئيسي ========== */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    margin-right: 0;
+    transition: margin-right 0.4s ease;
+    margin-top: 30px;
+    
+}
+
+
+/* ========== تصميم متجاوب ========== */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 280px;
+    }
+
+    .sidebar h3 {
+        font-size: 16px;
+        padding: 20px 15px;
+    }
+
+    ul li {
+        font-size: 15px;
+        padding: 12px 18px;
+    }
+
+    .log-btn {
+        font-size: 15px;
+        padding: 12px 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 85%;
+        max-width: 300px;
+    }
+}
+
+/* ========== خلفية التعتيم عند فتح السايد بار ========== */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.sidebar-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}

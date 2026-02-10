@@ -1,0 +1,498 @@
+/* ========== رأس الصفحة ========== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 60px;
+  }
+  
+  .page-header h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+  }
+  
+  /* ========== زر إضافة تذكرة ========== */
+  .btn-add {
+    background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(81, 189, 123, 0.3);
+  }
+  
+  .btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(81, 189, 123, 0.4);
+    background: linear-gradient(135deg, #429b64 0%, #51BD7B 100%);
+  }
+  
+  .btn-add:active {
+    transform: translateY(0);
+  }
+  
+  /* ========== حاوية الجدول ========== */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+  }
+  
+  /* ========== الجدول ========== */
+  .Porduct-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: separate;
+    border-spacing: 0;
+    direction: rtl;
+  }
+  
+  /* ========== رأس الجدول ========== */
+  .Porduct-table thead th {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 16px 20px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    white-space: nowrap;
+  }
+  
+  .Porduct-table thead th:first-child {
+    border-top-right-radius: 10px;
+  }
+  
+  .Porduct-table thead th:last-child {
+    border-top-left-radius: 10px;
+    text-align: center;
+  }
+  
+  /* ========== صفوف الجدول ========== */
+  .Porduct-table tbody tr {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .Porduct-table tbody tr:hover {
+    background-color: #f8fffe;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(81, 189, 123, 0.1);
+  }
+  
+  .Porduct-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  /* ========== خلايا الجدول ========== */
+  .Porduct-table td {
+    padding: 16px 20px;
+    text-align: right;
+    color: #495057;
+    font-size: 14px;
+    border: none;
+  }
+  
+  /* ========== شارات الحالة ========== */
+  .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+  
+  }
+  
+  .active-badge {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #28a745;
+    border: 1px solid #28a745;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.2);
+    padding: 6px 14px;
+  
+  }
+  
+  .inactive-badge {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.2);
+    padding: 6px 14px;
+  
+  }
+  
+  .pending-badge {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #ff9800;
+    border: 1px solid #ff9800;
+    box-shadow: 0 2px 6px rgba(255, 152, 0, 0.2);
+    padding: 6px 14px;
+  
+  }
+  
+  /* ========== أزرار الإجراءات ========== */
+  .edit-btn,
+  .delete-btn {
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .edit-btn {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #1976d2;
+    border: 1px solid #1976d2;
+  }
+  
+  .edit-btn:hover {
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+  }
+  
+  .delete-btn {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+  }
+  
+  .delete-btn:hover {
+    background: linear-gradient(135deg, #d32f2f 0%, #c62828 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+  }
+  
+  /* ========== نافذة النموذج المنبثقة ========== */
+  .Modal-overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    z-index: 1000;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  /* ========== صندوق النموذج ========== */
+  .modal {
+    background: white;
+    padding: 30px;
+    width: 400px;
+  
+    max-height: 80vh;     /* مهم */
+    overflow-y: auto;     /* مهم */
+  
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+    direction: rtl;
+  }
+  
+  .modal::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .modal::-webkit-scrollbar-thumb {
+    background-color: #51BD7B;
+    border-radius: 10px;
+  }
+  
+  @keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  
+  .modal h3 {
+    color: #2c3e50;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #51BD7B;
+  }
+  
+  /* ========== مجموعات النموذج ========== */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    direction: rtl;
+    box-sizing: border-box;
+    /* padding-left : 80px; */
+  
+    
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #51BD7B;
+    box-shadow: 0 0 0 4px rgba(81, 189, 123, 0.1);
+  }
+  
+  /* ========== قائمة الاختيار ========== */
+  .custom-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    direction: rtl;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 16px center;
+    padding-left: 40px;
+  }
+  
+  .custom-select:hover {
+    border-color: #51BD7B;
+  }
+  
+  .custom-select:focus {
+    outline: none;
+    border-color: #51BD7B;
+    box-shadow: 0 0 0 4px rgba(81, 189, 123, 0.1);
+  }
+  
+  /* ========== أزرار النموذج ========== */
+  .form-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-left : 60px;
+  }
+  
+  .btn-Edit,
+  .btn-cancle {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .btn-Edit {
+    background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(81, 189, 123, 0.3);
+  }
+  
+  .btn-Edit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(81, 189, 123, 0.4);
+  }
+  
+  .btn-cancle {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    color: #495057;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-cancle:hover {
+    background: linear-gradient(135deg, #dee2e6 0%, #ced4da 100%);
+    transform: translateY(-2px);
+  }
+  
+  .Porduct-table th.active-col,
+  .Porduct-table td.active-col {
+    width: 120px;        /* عرض ثابت */
+    /* white-space: nowrap;  */
+    text-align: center;
+  }
+  
+  
+   .Porduct-table th.status-col,
+  .Porduct-table td.status-col {
+    width: 80px; 
+    white-space: nowrap;
+    
+  } 
+  
+  /* .Porduct-table th:not(.status-col),
+  .Porduct-table td:not(.status-col) {
+    white-space: nowrap;
+  } */
+  
+  /* ========== تصميم متجاوب ========== */
+  @media screen and (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+  
+    .page-header h1 {
+        font-size: 20px;
+    }
+  
+    .btn-add {
+        width: 100%;
+    }
+  
+    .table-container {
+        padding: 10px;
+        border-radius: 8px;
+    }
+  
+    .modal {
+        padding: 20px;
+        width: 95%;
+    }
+  
+    .modal h3 {
+        font-size: 18px;
+    }
+  
+    /* تحويل الجدول لكروت في الموبايل */
+    .Porduct-table,
+    .Porduct-table thead,
+    .Porduct-table tbody,
+    .Porduct-table th,
+    .Porduct-table td,
+    .Porduct-table tr {
+        display: block;
+    }
+  
+    .Porduct-table thead {
+        display: none;
+    }
+  
+    .Porduct-table tbody tr {
+        margin-bottom: 20px;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 15px;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+  
+    .Porduct-table td {
+        padding: 10px 0;
+        text-align: right;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+  
+    .Porduct-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #2c3e50;
+        min-width: 100px;
+    }
+  
+    .Porduct-table td:last-child {
+        justify-content: center;
+        gap: 10px;
+        padding-top: 15px;
+        margin-top: 10px;
+        border-top: 1px solid #e9ecef;
+    }
+  
+    .edit-btn,
+    .delete-btn {
+        flex: 1;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .form-btns {
+        flex-direction: column;
+    }
+  
+    .btn-Edit,
+    .btn-cancle {
+        width: 100%;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,102 @@
+.settings-page {
+    margin-right: 150px;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+.settings-page h2 {
+    margin-top: 80px;
+    font-size: 26px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: right;
+  }
+  
+  /* === الكارد === */
+.settings-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  
+.settings-card h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: right;
+  }
+  
+.settings-card label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  /* === الانبوت === */
+.settings-card input {
+    width: 95%;
+    padding: 12px 16px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    direction: rtl;
+  }
+  
+.settings-card input:focus {
+    outline: none;
+    border-color: #51BD7B;
+    box-shadow: 0 0 0 4px rgba(81, 189, 123, 0.1);
+  }
+  
+  /* === أزرار الحفظ === */
+.settings-card button {
+    margin-top: 20px;
+    padding: 12px 0;
+    width: 99%;
+    background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(81, 189, 123, 0.3);
+  }
+  
+.settings-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(81, 189, 123, 0.4);
+    background: linear-gradient(135deg, #429b64 0%, #51BD7B 100%);
+  }
+  
+.settings-card button:active {
+    transform: translateY(0);
+  }
+  
+  /* === رسائل النجاح والخطأ === */
+.success-msg {
+    background-color: #d4edda;
+    color: #28a745;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.2);
+  }
+  
+.error-msg {
+    background-color: #f8d7da;
+    color: #dc3545;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.2);
+  }
+  

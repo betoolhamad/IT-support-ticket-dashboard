@@ -1,0 +1,174 @@
+/* ==============================
+   Tickets Status Chart - IT Support Dashboard
+   رسم بياني لحالة التذاكر
+   ============================== */
+
+/* ========== حاوية الإحصائيات ========== */
+.statistic {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 0x;
+  
+}
+
+/* ========== حاوية الرسم البياني ========== */
+.tikect-status-chart {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(81, 189, 123, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* خط علوي ملون */
+.tikect-status-chart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #51BD7B 0%, #429b64 100%);
+}
+
+.tikect-status-chart:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(81, 189, 123, 0.15);
+}
+
+/* ========== العنوان ========== */
+.tikect-status-chart h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.tikect-status-chart h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #51BD7B 0%, #429b64 100%);
+    border-radius: 2px;
+}
+
+/* ========== الرسم البياني ========== */
+.tikect-status-chart canvas {
+    width: 300px !important;
+    height: 300px !important;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+/* ========== تسميات الرسم ========== */
+.tikect-status-chart .chartjs-legend {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tikect-status-chart .chartjs-legend li {
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ========== أيقونة خلفية ========== */
+.tikect-status-chart::after {
+    content: '📊';
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    font-size: 150px;
+    opacity: 0.03;
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+/* ========== تصميم متجاوب ========== */
+@media screen and (max-width: 1024px) {
+    .statistic {
+        grid-template-columns: 1fr;
+    }
+
+    .tikect-status-chart {
+        height: auto;
+        min-height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tikect-status-chart {
+        padding: 25px 20px;
+        height: auto;
+        min-height: 380px;
+    }
+
+    .tikect-status-chart h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .tikect-status-chart canvas {
+        max-width: 240px !important;
+        max-height: 240px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tikect-status-chart {
+        padding: 20px 15px;
+        min-height: 350px;
+    }
+
+    .tikect-status-chart canvas {
+        max-width: 200px !important;
+        max-height: 200px !important;
+    }
+
+    .tikect-status-chart .chartjs-legend {
+        gap: 10px;
+    }
+
+    .tikect-status-chart .chartjs-legend li {
+        font-size: 13px;
+    }
+}
+
+/* ========== أنيميشن عند التحميل ========== */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tikect-status-chart {
+    animation: fadeInScale 0.6s ease-out;
+}

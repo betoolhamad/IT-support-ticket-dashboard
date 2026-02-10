@@ -1,0 +1,116 @@
+.downlowad-btn  {
+    cursor: pointer;
+
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #30a252;
+    color: white;
+     padding: 5px 15px;
+     border: none;
+     border-radius: 5px;
+     transition: all 0.3s ease-in-out;
+
+}
+
+.downlowad-btn:hover  {
+    background-color: #239749;
+   transform: scale(1.05); /* Slightly increases size on hover */
+}
+/* 
+.search-bar {
+    margin-top: 50px;
+}
+
+.all-downlowd-btn {
+
+        background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(81, 189, 123, 0.3);
+  
+   }
+.all-downlowd-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(81, 189, 123, 0.4);
+        background: linear-gradient(135deg, #429b64 0%, #51BD7B 100%);
+}
+      
+.all-downlowd-btn-btn:active {
+        transform: translateY(0);
+} */
+
+.search-export-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* المسافة بين السيرتش بار والزر */
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+  }
+  
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* يعطي input أكبر مساحة ممكنة */
+  }
+  
+  .search-bar label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2c3e50;
+  }
+  
+  .search-bar input {
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #51BD7B;
+    box-shadow: 0 0 0 4px rgba(81, 189, 123, 0.1);
+  }
+  
+  /* تصميم الزر كما عندك بالفعل */
+  .all-downlowd-btn {
+    background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(81, 189, 123, 0.3);
+  }
+  
+  .all-downlowd-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(81, 189, 123, 0.4);
+    background: linear-gradient(135deg, #429b64 0%, #51BD7B 100%);
+  }
+  
+  .all-downlowd-btn:active {
+    transform: translateY(0);
+  }
+  
+
+
+.Porduct-table th.status-col,
+.Porduct-table td.status-col {
+    width: 120px; 
+    white-space: nowrap;
+  
+} 
+

@@ -1,0 +1,404 @@
+/* ==============================
+   Tickets Form - IT Support Dashboard
+   صفحة إنشاء تذكرة جديدة
+   ============================== */
+
+/* ========== صفحة التذكرة ========== */
+.ticket-page {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  direction: rtl;
+}
+
+/* ========== العنوان الرئيسي ========== */
+.ticket-page h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #51BD7B;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(81, 189, 123, 0.1);
+}
+
+/* ========== خلفية المقدمة ========== */
+.background {
+  background: white;
+  border-radius: 20px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  max-width: 850px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(81, 189, 123, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* خط علوي ملون */
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #51BD7B 0%, #429b64 100%);
+}
+
+/* ========== نص المقدمة ========== */
+.ticket-intro {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0;
+  color: #495057;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ========== نموذج التذكرة ========== */
+.ticket-form {
+  background: white;
+  padding: 50px 80px;
+  margin: 0 auto;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border: 1px solid rgba(81, 189, 123, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* خط علوي للنموذج */
+.ticket-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #51BD7B 0%, #429b64 100%);
+}
+
+/* ========== عنوان النموذج ========== */
+.ticket-form h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 35px 0;
+  color: #2c3e50;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  position: relative;
+}
+
+.ticket-form h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #51BD7B 0%, #429b64 100%);
+}
+
+/* ========== التسميات ========== */
+.ticket-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+/* ========== الحقول ========== */
+.ticket-form input,
+.ticket-form select,
+.ticket-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: 0;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  font-family: 'Cairo', sans-serif;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus,
+.ticket-form textarea:focus {
+  border-color: #51BD7B;
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(81, 189, 123, 0.1);
+  transform: translateY(-1px);
+}
+
+.ticket-form input:hover,
+.ticket-form select:hover,
+.ticket-form textarea:hover {
+  border-color: #51BD7B;
+}
+
+/* ========== منطقة النص ========== */
+.ticket-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ========== حقل الهاتف ========== */
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.country-code {
+  padding: 14px 16px;
+  background: #e9ecef;
+  border-radius: 12px 0 0 12px;
+  border: 2px solid #e9ecef;
+  border-left: none;
+  font-weight: 600;
+  color: #495057;
+  font-size: 15px;
+}
+
+.phone-input input {
+  border-radius: 0 12px 12px 0;
+  border-right: none;
+  flex: 1;
+}
+
+/* ========== زر الإرسال ========== */
+.ticket-form button {
+  margin-top: 35px;
+  padding: 16px 24px;
+  width: 100%;
+  background: linear-gradient(135deg, #51BD7B 0%, #429b64 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(81, 189, 123, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.ticket-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(81, 189, 123, 0.4);
+  background: linear-gradient(135deg, #429b64 0%, #51BD7B 100%);
+}
+
+.ticket-form button:active {
+  transform: translateY(-1px);
+}
+
+/* ========== رسالة النجاح ========== */
+.success-msg {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #28a745;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  border: 2px solid #28a745;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* ========== تصميم متجاوب ========== */
+@media screen and (max-width: 1024px) {
+  .ticket-page h2 {
+      font-size: 32px;
+  }
+
+  .ticket-form {
+      padding: 45px 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ticket-page {
+      padding: 30px 15px;
+  }
+
+  .ticket-page h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+  }
+
+  .background {
+      padding: 25px 20px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+  }
+
+  .ticket-intro {
+      font-size: 16px;
+  }
+
+  .ticket-form {
+      padding: 35px 30px;
+      border-radius: 16px;
+  }
+
+  .ticket-form h3 {
+      font-size: 22px;
+      margin-bottom: 28px;
+  }
+
+  .ticket-form label {
+      font-size: 14px;
+      margin-top: 18px;
+  }
+
+  .ticket-form input,
+  .ticket-form select,
+  .ticket-form textarea {
+      padding: 12px 16px;
+      font-size: 14px;
+  }
+
+  .ticket-form button {
+      padding: 14px 20px;
+      font-size: 16px;
+      margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ticket-page {
+      padding: 20px 10px;
+  }
+
+  .ticket-page h2 {
+      font-size: 24px;
+  }
+
+  .background {
+      padding: 20px 15px;
+      border-radius: 12px;
+  }
+
+  .ticket-intro {
+      font-size: 15px;
+  }
+
+  .ticket-form {
+      padding: 25px 20px;
+      border-radius: 12px;
+  }
+
+  .ticket-form h3 {
+      font-size: 20px;
+      margin-bottom: 25px;
+  }
+
+  .ticket-form label {
+      font-size: 14px;
+      margin-top: 16px;
+  }
+
+  .ticket-form input,
+  .ticket-form select,
+  .ticket-form textarea {
+      padding: 11px 14px;
+      font-size: 14px;
+      border-radius: 10px;
+  }
+
+  .ticket-form textarea {
+      min-height: 100px;
+  }
+
+  .ticket-form button {
+      padding: 13px 18px;
+      font-size: 15px;
+      margin-top: 25px;
+  }
+
+  .success-msg {
+      padding: 14px 16px;
+      font-size: 14px;
+  }
+
+  .phone-input {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .country-code {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #e9ecef;
+      text-align: center;
+  }
+
+  .phone-input input {
+      border-radius: 10px;
+      border: 2px solid #e9ecef;
+  }
+}
+
+/* ========== أنيميشن عند التحميل ========== */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.ticket-form {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.background {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ========== Placeholder ========== */
+.ticket-form input::placeholder,
+.ticket-form textarea::placeholder {
+  color: #adb5bd;
+  font-size: 14px;
+}
+
+/* ========== نمط الـ autofill ========== */
+.ticket-form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #f8f9fa inset;
+  -webkit-text-fill-color: #2c3e50;
+}
+
+.ticket-form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
