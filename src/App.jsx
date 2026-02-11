@@ -19,7 +19,7 @@ function App() {
 
       <Routes>
 
-         <Route path="/" element={<Navigate to="/dashboard" />} />
+         <Route path="/" element={<Navigate to="/Login" />} />
 
          {/* <Route path="/new-ticket" element={IsLoggedIn ? <TicketsForm /> : <Navigate to="/login" replace />} /> */}
 
