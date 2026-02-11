@@ -1,5 +1,39 @@
 # IT-support-ticket-dashboard
 IT Support ticket dashboard for review the IT issues
+
+# IT Support Ticket Dashboard
+
+## Project Description
+The **IT Support Ticket Dashboard** is a system designed to handle technical issues for the IT support department. Users can submit issues through a dedicated form, while support staff manage, track, and resolve these tickets through a centralized dashboard interface.
+
+---
+
+## Main Features
+
+### 1. Main Dashboard
+- **Displays overall ticket statistics.**
+- **Provides a quick overview of ticket status and progress.**
+
+### 2. Tickets Section
+- **Lists all submitted tickets.**
+- **Allows support staff to monitor, update, and process each ticket efficiently.**
+
+### 3. Reports Section
+- **Displays ticket data retrieved from an API.**
+- **Supports exporting one or multiple tickets to PDF files.**
+- **Enables searching and filtering tickets by name, date, or status.**
+
+### 4. Settings Section
+- **Allows staff to update their email.**
+- **Provides an option to reset the password securely.**
+
+### 5. Dashboard Login Page
+- **Secure login page for staff access to the dashboard.**
+
+### 6. New Ticket Form Page
+- **Allows users to submit new technical issues.**
+- **Automatically routes tickets to the support team for follow-up.**
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
